@@ -1,0 +1,17 @@
+{{#if products}}
+  <h1 class="text-center mt-5">Listado de Productos</h1>
+
+  {{#each products}}
+    <div class="d-flex justify-content-around">
+      <div class="card m-5 border-0" style="width: 15%;">
+        <img src="{{this.thumbnail}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{this.title}}</h5>
+          <p class="card-text text-center">{{this.price}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2 class="text-center my-5">No hay productos</h2>
+{{/if}}

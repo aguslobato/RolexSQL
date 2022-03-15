@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RolexSQL</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 class="text-center mt-4">Formulario de carga de productos</h1>
+    <form id="productForm" class="container mt-5 col-2">
+      <label class="col">Title</label>
+      <input name="title" type="text" required class="col" />
+      <label class="col mt-2">Price</label>
+      <input name="price" type="number" step="0.01" required class="col" />
+      <label class="col mt-2">URL Image</label>
+      <input name="thumbnail" type="url" required class="col" />
+      <input type="submit" class="btn btn-success mt-4 col" />
+    </form>
+
+    <span id="productsTemplate"></span>
+
+    <div class="text-center">
+      <h2>Centro de Mensajes</h2>
+    </div>
+    <form id="chatForm" class="container col-2">
+      <p class="col mt-3">Ingresa tu email para chatear</p>
+      <input id="user" type="email" name="email" class="col mt-3" require />
+      <input id="chatBox" class="col mt-3" />
+      <button type="submit" class="btn btn-success mt-3 col">Enviar</button>
+      <p id="log" class="col mt-3"></p>
+    </form>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
